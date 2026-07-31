@@ -4,6 +4,8 @@
 
 A Python library that simulates LoRa radio propagation medium for protocol analysis and testing. It models the physical layer behavior of LoRa networks, enabling developers to test mesh protocols, evaluate network topologies, and stress-test implementations without physical hardware.
 
+*Five years ago this would have been a CS/EE/RF undergrad senior project. This month I created it backhanded because I needed it for my real project.*
+
 ## Features
 
 - **Propagation Models**: Free-space path loss (FSPL), log-distance path loss, two-ray ground reflection
