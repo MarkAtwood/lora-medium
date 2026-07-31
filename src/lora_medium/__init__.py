@@ -45,9 +45,17 @@ from .propagation import (
     LogDistancePL,
     PropagationModel,
     TwoRayGround,
+    link_budget,
 )
+from .quirks import PRESETS
 from .quirks import PRESETS as QUIRK_PRESETS
-from .quirks import QuirkProfile
+from .quirks import (
+    QuirkProfile,
+    apply_rssi_noise,
+    cad_with_quirks,
+    frequency_offset_hz,
+    pll_lock_fails,
+)
 from .transmission import Transmission, airtime_us, lr_fhss_airtime_us
 
 __all__ = [
@@ -67,6 +75,7 @@ __all__ = [
     "FSPL",
     "LogDistancePL",
     "TwoRayGround",
+    "link_budget",
     # Propagation constants
     "CAPTURE_THRESHOLD_DB",
     "PATH_LOSS_FREE_SPACE",
@@ -96,4 +105,9 @@ __all__ = [
     # Hardware quirks
     "QuirkProfile",
     "QUIRK_PRESETS",
+    "PRESETS",
+    "apply_rssi_noise",
+    "cad_with_quirks",
+    "frequency_offset_hz",
+    "pll_lock_fails",
 ]
