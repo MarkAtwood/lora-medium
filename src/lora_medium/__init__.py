@@ -19,23 +19,67 @@ from .chaos import (
     TxJitterRule,
 )
 from .duty_cycle import DutyCycleTracker
-from .medium import Medium, RxCandidate
-from .propagation import FSPL, LogDistancePL, PropagationModel, TwoRayGround
+from .medium import (
+    ChannelLoad,
+    Medium,
+    RendezvousInfo,
+    RendezvousMechanism,
+    RxCandidate,
+    TDMASlot,
+    TDMAVector,
+)
+from .propagation import (
+    CAPTURE_THRESHOLD_DB,
+    FSPL,
+    PATH_LOSS_FREE_SPACE,
+    PATH_LOSS_INDOOR,
+    PATH_LOSS_URBAN,
+    SENSITIVITY_DEFAULT,
+    SENSITIVITY_LR_FHSS,
+    SENSITIVITY_SF7,
+    SENSITIVITY_SF8,
+    SENSITIVITY_SF9,
+    SENSITIVITY_SF10,
+    SENSITIVITY_SF11,
+    SENSITIVITY_SF12,
+    LogDistancePL,
+    PropagationModel,
+    TwoRayGround,
+)
 from .quirks import PRESETS as QUIRK_PRESETS
 from .quirks import QuirkProfile
-from .transmission import Transmission, airtime_us
+from .transmission import Transmission, airtime_us, lr_fhss_airtime_us
 
 __all__ = [
     # Core
     "Medium",
     "RxCandidate",
+    "ChannelLoad",
+    "RendezvousInfo",
+    "RendezvousMechanism",
+    "TDMASlot",
+    "TDMAVector",
     "Transmission",
     "airtime_us",
+    "lr_fhss_airtime_us",
     # Propagation models
     "PropagationModel",
     "FSPL",
     "LogDistancePL",
     "TwoRayGround",
+    # Propagation constants
+    "CAPTURE_THRESHOLD_DB",
+    "PATH_LOSS_FREE_SPACE",
+    "PATH_LOSS_INDOOR",
+    "PATH_LOSS_URBAN",
+    "SENSITIVITY_DEFAULT",
+    "SENSITIVITY_LR_FHSS",
+    "SENSITIVITY_SF7",
+    "SENSITIVITY_SF8",
+    "SENSITIVITY_SF9",
+    "SENSITIVITY_SF10",
+    "SENSITIVITY_SF11",
+    "SENSITIVITY_SF12",
     # Chaos injection
     "ChaosEngine",
     "ChaosRule",
